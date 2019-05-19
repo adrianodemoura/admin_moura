@@ -1,3 +1,8 @@
+: Como criar um novo projeto no cakePHP 3?
+$ cd ~
+$ cd public_html
+$ composer create-project --prefer-dist cakephp/app MeuApp
+
 : Como criar um plugin ?
 $ bin/cake bake plugin Admoura
 

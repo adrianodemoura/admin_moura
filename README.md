@@ -8,7 +8,7 @@ $ composer require adrianodemoura/Admoura
 ```
 
 ```
-bin/cake migrations migrate -p Admoura
+$ bin/cake migrations migrate -p Admoura
 ```
 
 ```
