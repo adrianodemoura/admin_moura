@@ -1,0 +1,3 @@
+: Como criar um plugin ?
+$ bin/cake bake plugin NomePlugin
+

@@ -1,0 +1,20 @@
+: Como criar um plugin ?
+$ bin/cake bake plugin Admoura
+
+: Como criar um migration do plugin ?
+$ bin/cake migrations create AdmouraInicial -p Admoura
+
+: Como ver o status do migrate do plugin ?
+$ bin/cake migrations status -p Admoura
+
+: Como executar o migrate do plugin ?
+$ bin/cake migrations migrate -p Admoura
+
+: Como voltar o migrate do plugin ?
+$ bin/cake migrations rollback -p Admoura
+
+: Como criar um seed do plugin ?
+$ bin/cake bake seed usuarios -p Admoura
+
+: Como rodar o seed do plugin ?
+$ bin/cake migrations seed -p Admoura
