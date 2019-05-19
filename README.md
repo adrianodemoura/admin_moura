@@ -1,5 +1,8 @@
 # Admoura plugin de CakePHP 3
 
+## Considerações
+Admoura é um plugin feito em cakePHP 3 para administração de usuários.
+
 ## Instalação
 
 
