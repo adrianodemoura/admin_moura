@@ -20,7 +20,8 @@ class MunicipiosSeed extends AbstractSeed
     {
         $data   = [];
 
-        $arq    = ROOT . DS . 'plugins' . DS . 'Admoura' . DS . 'municipios.csv';
+        //$arq    = ROOT . DS . 'plugins' . DS . 'Admoura' . DS . 'municipios.csv';
+        $arq    = ROOT . DS . 'vendor' . DS . 'adrianodemoura' . DS . 'admoura' . DS . 'municipios.csv';
 
         $csvFile= file($arq);
 
