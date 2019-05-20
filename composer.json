@@ -11,12 +11,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Admoura\\": "src/"
+            "admoura\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Admoura\\Test\\": "tests/",
+            "admoura\\Test\\": "tests/",
             "Cake\\Test\\": "vendor/cakephp/cakephp/tests/"
         }
     }
