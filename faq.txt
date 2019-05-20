@@ -23,3 +23,11 @@ $ bin/cake bake seed usuarios -p Admoura
 
 : Como rodar o seed do plugin ?
 $ bin/cake migrations seed -p Admoura
+
+: Como clonar um diretório cheio ?
+$ cd /diretorio_cheio
+$ git init
+$ git remote add origin path_seu_git
+$ git add .
+$ git commit -am 'primeiro commit'
+$ git push -u origin master
