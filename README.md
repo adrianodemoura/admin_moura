@@ -14,9 +14,9 @@ $ composer require --dev adrianodemoura/admoura
 ```
 
 ```
-$ bin/cake migrations migrate -p admoura
+$ bin/cake migrations migrate -p Admoura
 ```
 
 ```
-$ bin/cake migrations seed -p admoura
+$ bin/cake migrations seed -p Admoura
 ```
