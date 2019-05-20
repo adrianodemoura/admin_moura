@@ -10,7 +10,7 @@ Antes da instalação certifique-se que o banco de dados está configurado na su
 Somente depois rode os comandos abaixo:
 
 ```
-$ composer require adrianodemoura/admoura
+$ composer require --dev adrianodemoura/admoura
 ```
 
 ```
