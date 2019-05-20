@@ -34,9 +34,14 @@ class UsuariosSeed extends AbstractSeed
                 sort($listaMunicipio);
             }
 
-            $id = substr(str_repeat('0', 3).($i+1), -3);
+            $id         = substr(str_repeat('0', 3).($i+1), -3);
+            $nome       = "Usuário ".$id;
+            if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN')
+            {
+                $nome = utf8_decode($nome);
+            }
 
-            $data[$i] = ['id'=>(int) $id, 'nome'=>"Usuário ".$id, 'municipio_id'=>$idMunicipio];
+            $data[$i] = ['id'=>(int) $id, 'nome'=>$nome, 'municipio_id'=>$idMunicipio];
         }
 
         $this->execute('delete from usuarios');

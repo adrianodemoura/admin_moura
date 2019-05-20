@@ -22,29 +22,36 @@ class XAssociacoesSeed extends AbstractSeed
 
         $listaUsuarios  = $this->query('select id, nome from usuarios order by 1')->fetchAll();
 
-        $listaUnidades  = $this->query('select id, nome from unidades order by 1')->fetchAll();
+        $_listaUnidades = $this->query('select id, nome from unidades order by 1')->fetchAll();
+        $totUnidades    = count($_listaUnidades)-1;
 
-        $listaPerfis    = $this->query('select id, nome from perfis order by 1')->fetchAll();
-        $totA           = count($listaPerfis)-2;
+        $_listaPerfis   = $this->query('select id, nome from perfis order by 1')->fetchAll();
+        $totPerfis      = count($_listaPerfis)-1;
 
-        for($i=0; $i<rand($totA-10,$totA); $i++)
+        $l = 0;
+        foreach ($listaUsuarios as $_l => $_arrCmp)
         {
-            $idU        = rand(0, (count($listaUsuarios)-1));
-            $idUsuario  = $listaUsuarios[$idU]['id'];
-            unset($listaUsuarios[$idU]);
-            sort($listaUsuarios);
+            $idUsuario      = $_arrCmp['id'];
+            $listaPerfis    = $_listaPerfis;
+            for($i=0; $i<rand(1,$totPerfis); $i++)
+            {
+                $idP        = rand(0, (count($listaPerfis)-1));
+                $idPerfil   = $listaPerfis[$idP]['id'];
+                unset($listaPerfis[$idP]);
+                sort($listaPerfis);
 
-            $idN        = rand(0,(count($listaUnidades)-1));
-            $idUnidade  = $listaUsuarios[$idN]['id'];
-            unset($listaUnidades[$idN]);
-            sort($listaUnidades);
+                $listaUnidades  = $_listaUnidades;
+                for($e=0; $e<rand(1,$totUnidades); $e++)
+                {
+                    $idN        = rand(0, (count($listaUnidades)-1));
+                    $idUnidade  = $listaUnidades[$idN]['id'];
+                    unset($listaUnidades[$idN]);
+                    sort($listaUnidades);
 
-            $idP        = rand(0,(count($listaPerfis)-1));
-            $idPerfil   = $listaPerfis[$idN]['id'];
-            unset($listaPerfis[$idN]);
-            sort($listaPerfis);
-
-            $data[$i]   = ['usuario_id'=>(int)$idUsuario, 'perfil_id'=>(int)$idPerfil, 'unidade_id'=>(int)$idUnidade];
+                    $data[$l]   = ['usuario_id'=>(int)$idUsuario, 'perfil_id'=>(int)$idPerfil, 'unidade_id'=>(int)$idUnidade];
+                    $l++;
+                }
+            }
         }
 
         $this->execute('delete from associacoes');
