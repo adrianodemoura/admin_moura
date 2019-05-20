@@ -10,13 +10,13 @@ Antes da instalação certifique-se que o banco de dados está configurado na su
 Somente depois rode os comandos abaixo:
 
 ```
-$ composer require adrianodemoura/Admoura
+$ composer require adrianodemoura/admoura
 ```
 
 ```
-$ bin/cake migrations migrate -p Admoura
+$ bin/cake migrations migrate -p admoura
 ```
 
 ```
-$ bin/cake migrations seed -p Admoura
+$ bin/cake migrations seed -p admoura
 ```
