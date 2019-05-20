@@ -1,7 +1,7 @@
 {
     "name": "adrianodemoura/admoura",
-    "description": "Admoura plugin for CakePHP",
-    "type": "cakephp-plugin",
+    "description": "Plugin para administração de usuários, perfis e unidades",
+    "type": "library",
     "license": "MIT",
     "require": {
         "cakephp/cakephp": "^3.5"
