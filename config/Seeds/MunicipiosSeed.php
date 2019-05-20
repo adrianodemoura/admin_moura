@@ -20,7 +20,6 @@ class MunicipiosSeed extends AbstractSeed
     {
         $data   = [];
 
-        //$arq    = ROOT . DS . 'plugins' . DS . 'Admoura' . DS . 'municipios2.csv';
         $arq    = ROOT . DS . 'plugins' . DS . 'Admoura' . DS . 'municipios.csv';
 
         $csvFile= file($arq);
@@ -30,6 +29,11 @@ class MunicipiosSeed extends AbstractSeed
             if ($_l)
             {
                 $arrCmps = str_getcsv($_linha);
+                if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN')
+                {
+                    $arrCmps[1] = utf8_decode($arrCmps[1]);
+                    $arrCmps[4] = utf8_decode($arrCmps[4]);
+                }
                 $data[] = 
                 [
                     'id'        => (int)$arrCmps[0], 
