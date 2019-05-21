@@ -1,3 +1,6 @@
+: Como criar um model ?
+$ bin/cake bake model Municipios --table muncipios -p admoura
+
 : Como criar um novo projeto no cakePHP 3?
 $ cd ~
 $ cd public_html
